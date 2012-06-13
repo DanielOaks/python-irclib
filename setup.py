@@ -1,5 +1,6 @@
 #! /usr/bin/env python
 
+import os
 import sys
 try:
     from setuptools import setup
@@ -7,9 +8,9 @@ except ImportError:
     from distutils.core import setup
 
 if sys.version_info >= (3, 0):
-       package_dir = {'': 'src3'}
+       package_dir = {'': 'py3'+os.sep+'src'}
 else:
-       package_dir = {'': 'src2'}
+       package_dir = {'': 'py2'+os.sep+'src'}
 
 setup(name="python-irclib",
       version="0.4.8",
